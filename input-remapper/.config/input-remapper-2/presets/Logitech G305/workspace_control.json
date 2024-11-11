@@ -1,0 +1,28 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 276,
+                "origin_hash": "0c8b0599460b02d28ffc9dd2a8715fea"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "key(Control_R).wait(200).modify(Control_L, modify(Alt  _L, key(Right)))",
+        "name": "next",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 275,
+                "origin_hash": "0c8b0599460b02d28ffc9dd2a8715fea"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "key(Control_R).wait(200).modify(Control_L, modify(Alt  _L, key(Left)))",
+        "name": "prev",
+        "mapping_type": "key_macro"
+    }
+]
