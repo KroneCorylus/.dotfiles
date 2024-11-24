@@ -1,5 +1,6 @@
 local harpoon = require("harpoon")
 local plenary = require("plenary")
+
 function list_from_folder()
 	local currentFile = vim.fn.expand('%')
 	local relativeDir = plenary.path:new(vim.fn.expand('%:p:h')):make_relative()
