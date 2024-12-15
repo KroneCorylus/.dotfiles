@@ -15,20 +15,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-	{
-		dir = "/home/krone/Development/InvokeAI.nvim",
-		opts = {
-			key_fn = function()
-				local handler = io.popen("secret-tool lookup OpenAI Key")
-				local key = ""
-				if handler ~= nil then
-					key = handler:read("*a")
-					handler:close()
-				end
-				return key
-			end,
-		},
-	},
 	{ import = ".plugins" },
 }, {})
 
