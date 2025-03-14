@@ -92,6 +92,8 @@ vim.defer_fn(function()
 			"css",
 			"angular",
 			"markdown",
+			"zig",
+			"glsl",
 		},
 
 		-- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)

@@ -218,6 +218,8 @@ return {
 					},
 				},
 			},
+			zls = {},
+			glsl_analyzer = {},
 		}
 
 		-- Ensure the servers and tools above are installed
