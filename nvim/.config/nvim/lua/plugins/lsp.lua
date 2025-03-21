@@ -218,9 +218,22 @@ return {
 					},
 				},
 			},
-			zls = {},
+			zls = { version = "0.13.0" },
 			glsl_analyzer = {},
 		}
+
+		local get_ensure_installed = function(server_config)
+			local result = {}
+			for k, v in pairs(server_config) do
+				local version = v["version"]
+				if version ~= nil and version ~= "" then
+					table.insert(result, { k, version = version })
+				else
+					table.insert(result, k)
+				end
+			end
+			return result
+		end
 
 		-- Ensure the servers and tools above are installed
 		--
@@ -241,7 +254,7 @@ return {
 				vim.lsp.buf.format()
 			end, { desc = "Format current buffer with LSP" })
 		end
-		local ensure_installed = vim.tbl_keys(servers or {})
+		local ensure_installed = get_ensure_installed(servers)
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
 			"prettierd",
