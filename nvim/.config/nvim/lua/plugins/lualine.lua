@@ -1,7 +1,12 @@
+local function autoformat()
+	if vim.g.disable_autoformat then
+		return [[]]
+	else
+		return [[format]]
+	end
+end
 return {
-	-- Set lualine as statusline
 	"nvim-lualine/lualine.nvim",
-	-- See `:help lualine.txt`
 	opts = {
 		options = {
 			icons_enabled = false,
@@ -9,6 +14,9 @@ return {
 			-- theme = 'onedark',
 			component_separators = "|",
 			section_separators = "",
+		},
+		sections = {
+			lualine_x = { { autoformat, color = { fg = "#95f542" } }, "encoding", "fileformat", "filetype" },
 		},
 	},
 }
