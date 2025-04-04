@@ -25,6 +25,7 @@ vim.o.termguicolors = true
 --Tab settings
 vim.o.expandtab = false
 vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 --Line number and relative number
 vim.wo.relativenumber = true
 vim.wo.number = true
