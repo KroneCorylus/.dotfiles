@@ -218,7 +218,7 @@ return {
 					},
 				},
 			},
-			zls = { version = "0.13.0" },
+			zls = { version = "0.14.0" },
 			glsl_analyzer = {},
 		}
 
