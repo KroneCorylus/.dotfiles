@@ -23,5 +23,6 @@ done
 # Run stow in dry-run mode for each valid directory
 for dir in "${STOW_DIRS[@]}"; do
     echo "Running: stow -vv -t ~ $dir"
-    stow -n -vv -t ~ "$dir"
+    # stow -n -vv -t ~ "$dir"
+    stow -vv -t ~ "$dir"
 done
