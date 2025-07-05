@@ -19,31 +19,17 @@ background = #0b0e14
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
-# theme = dark:OneHalfDark, light:OneHalfDark
 theme = ayu 
-# background-opacity = 0.8
-custom-shader = shaders/bloom050.glsl
-# custom-shader = shaders/map.glsl
-custom-shader = shaders/old_cursor_blaze.glsl
-# custom-shader = shaders/debug_cursor_animated.glsl
-# custom-shader = shaders/animated-gradient-shader.glsl
-# custom-shader = shaders/bettercrt.glsl
-# custom-shader = shaders/bloom.glsl
-# custom-shader = shaders/bloom1.glsl
-# custom-shader = shaders/bloom075.glsl
+# custom-shader = shaders/bloom025.glsl
+# custom-shader = cursor-shaders/cursor_blaze.glsl
+custom-shader = cursor-shaders/cursor_frozen.glsl
+# custom-shader = cursor-shaders/WIP.glsl
+# custom-shader = cursor-shaders/cursor_smear.glsl
 # custom-shader = shaders/bloom060.glsl
 # custom-shader = shaders/bloom025.glsl
 # custom-shader = shaders/bloom050.glsl
 # custom-shader = shaders/bloom060.glsl
 # custom-shader = shaders/bloom075.glsl
-# custom-shader = shaders/bloom1.glsl
-# custom-shader = shaders/crt.g.glslsdasdas
-# custom-shader = shaders/retro-terminal.glsl# custom-shader = shaders/smoke-and-ghost.glsl
-# custom-shader = shaders/sparks-from-fire.glsl
-# custom-shader = shaders/spotlight.glsl
-# custom-shader = shaders/starfield-colors.dasdd
-
-
 
 # custom-shader = shaders/cursor_blaze.glsl
 # custom-shader = shaders/cursor_blaze_no_trail.glsl
