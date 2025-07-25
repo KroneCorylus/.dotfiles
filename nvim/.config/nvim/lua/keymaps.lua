@@ -73,6 +73,10 @@ INSERT INTO traducciones_x_idioma(id_idioma, id_traduccion, texto) VALUES(4, @id
 Now, generate the script for the following input:
 ]]
 
+local debugCommentPrompt = [[
+add logs to this block of code to debug it. DO NOT CHANGE NOTHING MORE. the log should include the name of the variable being logged and the position, like if entering the function, before return, after some condition, etc
+]]
+
 --InvokeAI
 vim.keymap.set({ "v", "n" }, "<F5>", function()
 	vim.cmd(":w")
@@ -80,26 +84,30 @@ vim.keymap.set({ "v", "n" }, "<F5>", function()
 	require("invokeai").reset()
 end, { silent = true })
 
-vim.keymap.set("v", "<Leader>ia", function()
+vim.keymap.set("v", "<Leader>iaa", function()
 	require("invokeai").popup()
 end, { silent = true, desc = "Ask IA and get response in floating window" })
 
-vim.keymap.set("v", "<Leader>ib", function()
+vim.keymap.set("v", "<Leader>ir", function()
 	require("invokeai").popup({ resolve_fn = require("invokeai.resolvers.replace") })
 end, { silent = true, desc = "Ask IA as replace" })
 
-vim.keymap.set("v", "<Leader>it", function()
+vim.keymap.set("v", "<Leader>iat", function()
 	require("invokeai").pre_prompt(
 		"add the correct type annotations and if the language allow it and some arguments are checked for nulish, remember to set that can be nulish on the types",
 		{ resolve_fn = require("invokeai.resolvers.replace") }
 	)
 end, { silent = true, desc = "Add types" })
 
-vim.keymap.set("v", "<Leader>is", function()
+vim.keymap.set("v", "<Leader>ias", function()
 	require("invokeai").pre_prompt(sqlTradPrompt, { resolve_fn = require("invokeai.resolvers.replace") })
 end, { silent = true, desc = "Generate a traducciones sql script" })
 
-vim.keymap.set("v", "<Leader>il", function()
+vim.keymap.set("v", "<Leader>iac", function()
+	require("invokeai").pre_prompt(debugCommentPrompt, { resolve_fn = require("invokeai.resolvers.replace") })
+end, { silent = true, desc = "Generate comments to debug" })
+
+vim.keymap.set("v", "<Leader>ial", function()
 	require("invokeai").pre_prompt(
 		"only add type annotations in LuaCATS format",
 		{ resolve_fn = require("invokeai.resolvers.replace") }
